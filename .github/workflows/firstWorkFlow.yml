@@ -3,6 +3,9 @@ name: First Workflow
 on:
   workflow_dispatch
 
+env:
+  MIKE_VAR: 12345
+  
 jobs:
   firstjob:
     name: First Job
@@ -21,6 +24,9 @@ jobs:
         run: |
           echo "The time of the greeting was at: ${{ steps.greetings.outputs.time }}"
           
+      - name: Dispay my var
+        run: echo ${env.MIKE_VAR}
+        
   secondjob:
     name: Second Job
     runs-on: ubuntu-latest
