@@ -32,10 +32,12 @@ jobs:
     name: Second Job
     needs: [firstjob]
     runs-on: ubuntu-latest
+    env:
+      JOB_VAR: "This is a job variable"
+      
     steps:
       - name: Second Job - Ubuntu
         shell: bash
         run: |
-          echo This is the second job
-          echo Multi-line script
+          echo "$JOB_VAR"
     
