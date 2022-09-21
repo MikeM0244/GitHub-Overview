@@ -25,6 +25,7 @@ jobs:
           echo "The time of the greeting was at: ${{ steps.greetings.outputs.time }}"
           
       - name: Dispay my var
+        shell: pwsh
         run: echo ${env.MIKE_VAR}
         
   secondjob:
