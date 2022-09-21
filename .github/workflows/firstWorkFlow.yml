@@ -5,6 +5,7 @@ on:
 
 jobs:
   firstjob:
+    name: First Job
     runs-on: windows-latest
     steps:
       - name: First Job - Script
@@ -12,6 +13,7 @@ jobs:
         run: echo Hello from actions
   
   secondjob:
+    name: Second Job
     runs-on: ubuntu-latest
     steps:
       - name: Second Job - Ubuntu
