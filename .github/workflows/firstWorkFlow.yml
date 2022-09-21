@@ -1,0 +1,22 @@
+name: First Workflow
+
+on:
+  workflow_dispatch
+
+jobs:
+  firstjob:
+    runs-on: windows-latest
+    steps:
+      - name: First Job - Script
+        shell: cmd
+        run: echo Hello from actions
+  
+  second:job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second Job - Ubuntu
+        shell: bash
+        run: |
+          echo This is the second job
+          echo Multi-line script
+    
