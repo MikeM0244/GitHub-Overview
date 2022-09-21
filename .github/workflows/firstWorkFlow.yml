@@ -29,6 +29,7 @@ jobs:
         
   secondjob:
     name: Second Job
+    needs: [firstjob]
     runs-on: ubuntu-latest
     steps:
       - name: Second Job - Ubuntu
