@@ -11,7 +11,7 @@ jobs:
         shell: cmd
         run: echo Hello from actions
   
-  second:job:
+  secondjob:
     runs-on: ubuntu-latest
     steps:
       - name: Second Job - Ubuntu
